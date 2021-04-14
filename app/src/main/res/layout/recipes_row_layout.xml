@@ -58,9 +58,32 @@
                 android:layout_marginTop="12dp"
                 android:ellipsize="end"
                 android:maxLines="3"
+                android:textColor="@color/descriptionColor"
                 app:layout_constraintEnd_toEndOf="@+id/title_textView"
                 app:layout_constraintStart_toStartOf="@+id/title_textView"
                 app:layout_constraintTop_toBottomOf="@+id/title_textView" />
+
+            <ImageView
+                android:id="@+id/heart_imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="36dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/heart_textView"
+                app:layout_constraintTop_toBottomOf="@+id/description_textView"
+                app:srcCompat="@drawable/ic_favorite"
+                app:tint="@color/darkPink" />
+
+            <TextView
+                android:id="@+id/heart_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textAlignment="center"
+                android:textColor="@color/darkPink"
+                app:layout_constraintStart_toStartOf="@+id/description_textView"
+                app:layout_constraintTop_toBottomOf="@+id/heart_imageView" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
