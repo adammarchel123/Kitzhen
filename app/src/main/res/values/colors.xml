@@ -11,6 +11,7 @@
     <color name="darkPink">#FF5A5A</color>
     <color name="lightMediumGray">#80D1D1D1</color>
     <color name="darker">#424242</color>
+    <color name="yellow">#FF8F00</color>
 
     <color name="strokeColor">@color/lightMediumGray</color>
     <color name="titleColor">@color/darker</color>

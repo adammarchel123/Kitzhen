@@ -71,6 +71,7 @@
                 android:layout_marginBottom="36dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/heart_textView"
+                app:layout_constraintStart_toStartOf="@+id/heart_textView"
                 app:layout_constraintTop_toBottomOf="@+id/description_textView"
                 app:srcCompat="@drawable/ic_favorite"
                 app:tint="@color/darkPink" />
@@ -84,6 +85,25 @@
                 android:textColor="@color/darkPink"
                 app:layout_constraintStart_toStartOf="@+id/description_textView"
                 app:layout_constraintTop_toBottomOf="@+id/heart_imageView" />
+
+            <ImageView
+                android:id="@+id/clock_imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/clock_textView"
+                app:layout_constraintStart_toStartOf="@+id/clock_textView"
+                app:layout_constraintTop_toTopOf="@+id/heart_imageView"
+                app:srcCompat="@drawable/ic_timer" />
+
+            <TextView
+                android:id="@+id/clock_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="1"
+                android:textAlignment="center"
+                app:layout_constraintStart_toEndOf="@+id/heart_textView"
+                app:layout_constraintTop_toBottomOf="@+id/clock_imageView" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
