@@ -9,4 +9,7 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="darkPink">#FF5A5A</color>
+    <color name="lightMediumGray">#80D1D1D1</color>
+
+    <color name="strokeColor">@color/lightMediumGray</color>
 </resources>
