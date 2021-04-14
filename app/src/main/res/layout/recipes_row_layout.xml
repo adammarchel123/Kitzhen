@@ -93,7 +93,8 @@
                 app:layout_constraintEnd_toEndOf="@+id/clock_textView"
                 app:layout_constraintStart_toStartOf="@+id/clock_textView"
                 app:layout_constraintTop_toTopOf="@+id/heart_imageView"
-                app:srcCompat="@drawable/ic_timer" />
+                app:srcCompat="@drawable/ic_timer"
+                app:tint="@color/yellow" />
 
             <TextView
                 android:id="@+id/clock_textView"
@@ -102,9 +103,28 @@
                 android:layout_marginStart="24dp"
                 android:text="1"
                 android:textAlignment="center"
+                android:textColor="@color/yellow"
                 app:layout_constraintStart_toEndOf="@+id/heart_textView"
                 app:layout_constraintTop_toBottomOf="@+id/clock_imageView" />
 
+            <ImageView
+                android:id="@+id/leaf_imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/leaf_textView"
+                app:layout_constraintStart_toStartOf="@+id/leaf_textView"
+                app:layout_constraintTop_toTopOf="@+id/clock_imageView"
+                app:srcCompat="@drawable/ic_eco" />
+
+            <TextView
+                android:id="@+id/leaf_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="Vegan"
+                android:textAlignment="center"
+                app:layout_constraintStart_toEndOf="@+id/clock_textView"
+                app:layout_constraintTop_toBottomOf="@+id/leaf_imageView" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

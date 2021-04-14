@@ -16,5 +16,6 @@
     <color name="strokeColor">@color/lightMediumGray</color>
     <color name="titleColor">@color/darker</color>
     <color name="descriptionColor">@color/darker</color>
+    <color name="itemColor">@color/darker</color>
 
 </resources>
