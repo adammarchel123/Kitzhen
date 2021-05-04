@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -19,10 +20,12 @@ import com.example.kitzhen.util.Constants.Companion.QUERY_DIET
 import com.example.kitzhen.util.Constants.Companion.QUERY_FILL_INGREDIENTS
 import com.example.kitzhen.util.Constants.Companion.QUERY_NUMBER
 import com.example.kitzhen.util.Constants.Companion.QUERY_TYPE
+import com.example.kitzhen.util.NetworkResult
 import com.example.kitzhen.viewmodels.MainViewModel
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_recipes.view.*
 
-
+@AndroidEntryPoint
 class RecipesFragment : Fragment() {
 
     private lateinit var mainViewModel: MainViewModel
@@ -40,11 +43,33 @@ class RecipesFragment : Fragment() {
 
         setupRecyclerView()
 
+        requestApiData()
+
         return mView
     }
 
     private fun requestApiData() {
         mainViewModel.getRecipes(applyQueries())
+        mainViewModel.recipesResponse.observe(viewLifecycleOwner, { response ->
+            when (response) {
+                is NetworkResult.Success -> {
+                    hideShimmerEffect()
+                    response.data?.let { mAdapter.setData(it) }
+                }
+                is NetworkResult.Error -> {
+                    hideShimmerEffect()
+                    // loadDataFromCache()
+                    Toast.makeText(
+                        requireContext(),
+                        response.message.toString(),
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+                is NetworkResult.Loading -> {
+                    showShimmerEffect()
+                }
+            }
+        })
     }
 
     private fun applyQueries(): HashMap<String, String> {
