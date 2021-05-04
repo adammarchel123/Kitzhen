@@ -122,6 +122,7 @@
 
                 <ImageView
                     android:id="@+id/leaf_imageView"
+                    applyVeganColor="@{result.vegan}"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintEnd_toEndOf="@+id/leaf_textView"
@@ -132,6 +133,7 @@
 
                 <TextView
                     android:id="@+id/leaf_textView"
+                    applyVeganColor="@{result.vegan}"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
