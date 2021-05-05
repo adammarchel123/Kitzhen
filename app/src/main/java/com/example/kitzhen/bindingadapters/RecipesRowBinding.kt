@@ -1,6 +1,5 @@
 package com.example.kitzhen.bindingadapters
 
-import android.graphics.Color.green
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
